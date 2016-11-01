@@ -10,31 +10,29 @@ namespace Lommeregner_01
     {
         static void Main(string[] args)
         {
-            //double input01 = 0.0;
-            //double input1 = 0.0;
-            //double input2 = 0.0;
-            //string valg = "";
-            bool forfra = false;
-
             
-
+            bool forfra = true;
             int resultat;
             string Res = "Resultat er: ";
+            string info = "Indtast tal og tryk Enter! ";
 
             do
             {
                 Console.WriteLine("****************************");
                 Console.WriteLine("***     LOMMEREGNER      ***");
                 Console.WriteLine("****************************");
+                Console.WriteLine("");
 
-                Console.WriteLine("Indtast det første tal: ");
+                Console.WriteLine(info);
                 string indput1 = Console.ReadLine();
                 int tal1 = Int32.Parse(indput1);
+                //bool ok1 = Int32.TryParse(indput1, out tal1);
                 Console.WriteLine("Vælg operator! ");
                 string valg = Console.ReadLine();
-                Console.WriteLine("Indtast det andet tal");
+                Console.WriteLine(info);
                 string indput2 = Console.ReadLine();
                 int tal2 = Int32.Parse(indput2);
+                //bool ok2 = Int32.TryParse(indput2, out tal2);
 
                 //Console.Read();
 
@@ -43,7 +41,7 @@ namespace Lommeregner_01
                 {
                     resultat = tal1 + tal2;
                     Console.WriteLine(Res + resultat);
-                    forfra = true;
+                    //forfra = true;
                 }
                 else if (valg == "-")
                 {
@@ -66,23 +64,15 @@ namespace Lommeregner_01
                     Console.WriteLine("Du skal vælge + - eller * tegn! ");
                 }
 
-            } while (!forfra);
+                Console.WriteLine("Tast Q/q for at lukke eller tryk på en vilkårlig tast for at fortsætte");
+                string Quit = Console.ReadLine();
+                if (Quit == "q" || Quit == "Q")
+                {
+                    forfra = false;
+                }
 
-            Console.ReadLine();
-                
-          
-
-            //Console.WriteLine(resultat);
-            //Console.WriteLine("Tast Q for at lukke eller tryk på en vilkårlig tast for at fortsætte");
-            //string Quit = Console.ReadLine();
-            //if (Quit == "q")
-            //{
-            //    Console.ReadKey();
-            //    forfra = false;
-            //}
-
+            } while (forfra);
             
-
         }
     }
 }
