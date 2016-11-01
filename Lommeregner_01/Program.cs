@@ -10,7 +10,7 @@ namespace Lommeregner_01
     {
         static void Main(string[] args)
         {
-            
+            // Lavet af Rolf og Saan.
             bool forfra = true;
             int resultat;
             string Res = "Resultat er: ";
