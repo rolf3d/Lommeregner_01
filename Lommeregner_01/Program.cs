@@ -34,14 +34,12 @@ namespace Lommeregner_01
                 int tal2 = Int32.Parse(indput2);
                 //bool ok2 = Int32.TryParse(indput2, out tal2);
 
-                //Console.Read();
-
 
                 if (valg == "+")
                 {
                     resultat = tal1 + tal2;
                     Console.WriteLine(Res + resultat);
-                    //forfra = true;
+                    
                 }
                 else if (valg == "-")
                 {
@@ -61,7 +59,7 @@ namespace Lommeregner_01
 
                 else
                 {
-                    Console.WriteLine("Du skal vælge + - eller * tegn! ");
+                    Console.WriteLine("Du skal vælge + - / eller * tegn! ");
                 }
 
                 Console.WriteLine("Tast Q/q for at lukke eller tryk på en vilkårlig tast for at fortsætte");

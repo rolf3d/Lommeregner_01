@@ -12,10 +12,7 @@ namespace Lommeregner_01
         double input2 = 0.0;
         string valg;
 
-        public regner()
-        {
-
-        }
+        
 
         
         
