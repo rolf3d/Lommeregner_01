@@ -11,34 +11,78 @@ namespace Lommeregner_01
         static void Main(string[] args)
         {
             //double input01 = 0.0;
-            double input1 = 0.0;
-            double input2 = 0.0;
-            string valg = "";
-            double resultat = 0.0;
+            //double input1 = 0.0;
+            //double input2 = 0.0;
+            //string valg = "";
+            bool forfra = false;
 
-            double input01 = Convert.ToDouble(Console.ReadLine());
-            double input02 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine(input01);
+            
 
-            if (valg == "+")
+            int resultat;
+            string Res = "Resultat er: ";
+
+            do
             {
-                resultat = input1 + input2;
-            }
-            else if (valg == "-")
-            {
-                resultat = input1 - input2;
-            }
-            else if (valg == "*")
-            {
-                resultat = input1 * input2;
-            }
-            else
-            {
-                Console.WriteLine("Du skal vælge + - eller * tegn! ");
-            }
+                Console.WriteLine("****************************");
+                Console.WriteLine("***     LOMMEREGNER      ***");
+                Console.WriteLine("****************************");
+
+                Console.WriteLine("Indtast det første tal: ");
+                string indput1 = Console.ReadLine();
+                int tal1 = Int32.Parse(indput1);
+                Console.WriteLine("Vælg operator! ");
+                string valg = Console.ReadLine();
+                Console.WriteLine("Indtast det andet tal");
+                string indput2 = Console.ReadLine();
+                int tal2 = Int32.Parse(indput2);
+
+                //Console.Read();
 
 
-      
+                if (valg == "+")
+                {
+                    resultat = tal1 + tal2;
+                    Console.WriteLine(Res + resultat);
+                    forfra = true;
+                }
+                else if (valg == "-")
+                {
+                    resultat = tal1 - tal2;
+                    Console.WriteLine(Res + resultat);
+                }
+                else if (valg == "*")
+                {
+                    resultat = tal1 * tal2;
+                    Console.WriteLine(Res + resultat);
+                }
+                else if (valg == "/")
+                {
+                    resultat = tal1 / tal2;
+                    Console.WriteLine(Res + resultat);
+                }
+
+                else
+                {
+                    Console.WriteLine("Du skal vælge + - eller * tegn! ");
+                }
+
+            } while (!forfra);
+
+            Console.ReadLine();
+                
+          
+
+            //Console.WriteLine(resultat);
+            //Console.WriteLine("Tast Q for at lukke eller tryk på en vilkårlig tast for at fortsætte");
+            //string Quit = Console.ReadLine();
+            //if (Quit == "q")
+            //{
+            //    Console.ReadKey();
+            //    forfra = false;
+            //}
+
+            
+
         }
     }
 }
